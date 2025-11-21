@@ -96,20 +96,6 @@ export default function App() {
                 </button>
             </div>
 
-            {/* Content Area */}
-            <div className="flex-1 relative bg-gray-950 overflow-hidden">
-                {/* Preview Mode */}
-                <div className={`absolute inset-0 w-full h-full flex flex-col ${activeTab === TabView.CODE ? 'z-0 opacity-0 pointer-events-none' : 'z-10 opacity-100'}`}>
-                     <div className="bg-amber-900/50 text-amber-200 text-xs px-4 py-2 text-center border-b border-amber-800/50 backdrop-blur-sm">
-                        <strong>Note:</strong> Images uploaded via file selection are converted to Base64 for preview. For the final eBay listing, ensure you use hosted URLs (https://...) if eBay blocks large code blocks.
-                    </div>
-                    <iframe 
-                        ref={iframeRef}
-                        title="Preview"
-                        className="w-full h-full border-none bg-white"
-                    />
-                </div>
-
                 {/* Code Mode */}
                 <div className={`absolute inset-0 w-full h-full flex flex-col bg-gray-950 ${activeTab === TabView.CODE ? 'z-20 opacity-100' : 'z-0 opacity-0 pointer-events-none'}`}>
                     <div className="flex items-center justify-between px-4 py-2 bg-gray-900 border-b border-gray-800">
