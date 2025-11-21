@@ -1,7 +1,27 @@
 import { ListingData } from './types';
 
+// Account mapping for internal use
+export const ACCOUNTS = [
+  { id: "1", name: "ledsone" },
+  { id: "2", name: "retroled" },
+  { id: "3", name: "bestbringer" },
+  { id: "4", name: "sunsone" },
+  { id: "21", name: "dctransformer" },
+  { id: "22", name: "electricalsone" },
+  { id: "23", name: "lightingsone" },
+  { id: "24", name: "coventrylights" },
+  { id: "25", name: "electro_shine" },
+  { id: "27", name: "ledsonede" },
+  { id: "28", name: "huettenlampen" },
+  { id: "41", name: "vintageinterior" },
+  { id: "211", name: "urigal" },
+  { id: "222", name: "homin_gmbh" },
+  { id: "238", name: "neighbourmarket" }
+];
+
 export const INITIAL_DATA: ListingData = {
   title: "Modern Ceiling Light Shade Lampshade Easy Fit Pendant Metal Kitchen Living Room",
+  accountId: "1", // Default to ledsone
   logoUrl: "https://ledsone.co.uk/cdn/shop/files/logo.gif?v=1689066753&width=165",
   logoAlt: "Ledsone - Quality Lighting Store",
   ebayStoreUrl: "https://www.ebay.co.uk/str/ledsone",
