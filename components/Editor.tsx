@@ -229,7 +229,7 @@ export const Editor: React.FC<EditorProps> = ({ data, onChange }) => {
                         <button onClick={() => removeArrayItem('specifications', idx)} className="text-red-400 hover:text-red-600"><Trash2 size={16}/></button>
                     </div>
                 ))}
-                <button onClick={() => addArrayItem('specifications')} className="text-xs text-blue-600 hover:underline flex items-center gap-1"><Plus size={12}/> Add Spec</button>
+                <button onClick={() => addArrayItem('specifications')} className="text-xs text-blue-400 hover:text-blue-300 flex items-center gap-1"><Plus size={12}/> Add Spec</button>
             </div>
 
              {/* About Items */}
@@ -241,7 +241,7 @@ export const Editor: React.FC<EditorProps> = ({ data, onChange }) => {
                         <button onClick={() => removeArrayItem('aboutItems', idx)} className="text-red-400 hover:text-red-600 self-center"><Trash2 size={16}/></button>
                     </div>
                 ))}
-                 <button onClick={() => addArrayItem('aboutItems')} className="text-xs text-blue-600 hover:underline flex items-center gap-1"><Plus size={12}/> Add Feature</button>
+                 <button onClick={() => addArrayItem('aboutItems')} className="text-xs text-blue-400 hover:text-blue-300 flex items-center gap-1"><Plus size={12}/> Add Feature</button>
             </div>
         </section>
 
