@@ -89,7 +89,7 @@ export const ImageUploader: React.FC<ImageUploaderProps> = ({
               <div className="flex items-center border border-gray-300 rounded px-2 py-1 bg-white focus-within:ring-2 focus-within:ring-blue-500">
                   <input 
                       type="text" 
-                      placeholder="Alt text (for accessibility)"
+                      placeholder="Add Alt Text"
                       className="text-sm w-full outline-none bg-transparent text-gray-900 placeholder-gray-400"
                       value={altText}
                       onChange={(e) => onAltTextChange(e.target.value)}
