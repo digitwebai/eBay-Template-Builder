@@ -3,6 +3,7 @@ import { ListingData, ComparisonItem } from '../types';
 import { ImageUploader } from './ImageUploader';
 import { generateDescription, optimizeTitle } from '../services/geminiService';
 import { Sparkles, Trash2, Plus, Loader2 } from 'lucide-react';
+import { ACCOUNTS } from '../constants';
 
 interface EditorProps {
   data: ListingData;
@@ -82,6 +83,38 @@ export const Editor: React.FC<EditorProps> = ({ data, onChange }) => {
         {/* Section: Basic Info */}
         <section className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
             <h3 className="text-lg font-bold text-gray-800 mb-4 border-b pb-2">Basic Information</h3>
+            
+            {/* Account Selector */}
+            <div className="mb-4">
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                    <span className="flex items-center gap-2">
+                        <span className="text-blue-600">●</span>
+                        Account Selection
+                        <span className="text-xs text-gray-500 font-normal">(Internal use only)</span>
+                    </span>
+                </label>
+                <div className="relative">
+                    <select 
+                        value={data.accountId} 
+                        onChange={(e) => updateField('accountId', e.target.value)}
+                        className="w-full appearance-none border-2 border-blue-200 bg-gradient-to-r from-blue-50 to-white text-gray-900 rounded-lg px-4 py-2.5 pr-10 text-sm font-medium focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none cursor-pointer hover:border-blue-300 transition-all"
+                    >
+                        {ACCOUNTS.map(account => (
+                            <option key={account.id} value={account.id}>
+                                {account.name} (ID: {account.id})
+                            </option>
+                        ))}
+                    </select>
+                    <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-blue-600">
+                        <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                            <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/>
+                        </svg>
+                    </div>
+                </div>
+                <p className="mt-1 text-xs text-gray-500 italic">
+                    ℹ️ This is for internal tracking only and will not appear in the eBay listing
+                </p>
+            </div>
             
             <div className="mb-4">
                 <label className="block text-sm font-medium text-gray-700 mb-1">Product Title</label>
