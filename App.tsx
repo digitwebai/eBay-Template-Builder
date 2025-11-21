@@ -96,6 +96,17 @@ export default function App() {
                 </button>
             </div>
 
+            {/* Content Area */}
+            <div className="flex-1 relative bg-gray-950 overflow-hidden">
+                {/* Preview Mode */}
+                <div className={`absolute inset-0 w-full h-full flex flex-col ${activeTab === TabView.CODE ? 'z-0 opacity-0 pointer-events-none' : 'z-10 opacity-100'}`}>
+                    <iframe 
+                        ref={iframeRef}
+                        title="Preview"
+                        className="w-full h-full border-none bg-white"
+                    />
+                </div>
+
                 {/* Code Mode */}
                 <div className={`absolute inset-0 w-full h-full flex flex-col bg-gray-950 ${activeTab === TabView.CODE ? 'z-20 opacity-100' : 'z-0 opacity-0 pointer-events-none'}`}>
                     <div className="flex items-center justify-between px-4 py-2 bg-gray-900 border-b border-gray-800">
