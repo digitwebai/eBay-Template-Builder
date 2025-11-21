@@ -17,6 +17,7 @@ export interface MainImage {
 
 export interface ListingData {
   title: string;
+  accountId: string; // For internal use - not exported to eBay HTML
   mainImages: MainImage[]; // Array of images with alt text
   comparisonItems: ComparisonItem[];
   description: string;
