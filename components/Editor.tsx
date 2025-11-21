@@ -210,7 +210,6 @@ export const Editor: React.FC<EditorProps> = ({ data, onChange }) => {
                             <input type="text" placeholder="Base (e.g. E27)" className="border border-gray-700 bg-gray-800 text-gray-100 p-2.5 rounded-lg text-xs focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none placeholder-gray-600" value={item.base} onChange={(e) => handleCompChange(idx, 'base', e.target.value)} />
                             <input type="text" placeholder="eBay Link URL" className="border border-gray-700 bg-gray-800 text-gray-100 p-2.5 rounded-lg text-xs col-span-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none placeholder-gray-600" value={item.link} onChange={(e) => handleCompChange(idx, 'link', e.target.value)} />
                         </div>
-                        </div>
                     </div>
                 ))}
             </div>
